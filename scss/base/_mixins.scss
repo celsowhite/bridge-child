@@ -1,0 +1,48 @@
+// CSS3: backface-visibility
+
+@mixin backface-visibility( $style: visible ) {
+	@each $prefix in -moz, -ms, -o, -webkit {
+		#{$prefix}-backface-visibility: $style;
+	}
+	backface-visibility: $style;
+}
+
+// Keyframes
+
+@mixin keyframes($name) {
+	@-webkit-keyframes #{$name} {
+		@content;
+	}
+	@-moz-keyframes #{$name} {
+		@content;
+	}
+	@-ms-keyframes #{$name} {
+		@content;
+	}
+	@keyframes #{$name} {
+		@content;
+	}
+}
+
+// Animation
+
+@mixin animation($animation_properties) {
+	-webkit-animation: #{$animation_properties};
+	-moz-animation: #{$animation_properties};
+	-o-animation: #{$animation_properties};
+	animation: #{$animation_properties};
+}
+
+// Media Queries
+
+@mixin mobile() {
+	@media all and (max-width: 480px){
+		@content;
+	}
+}
+
+@mixin tablet() {
+	@media all and (max-width: 768px){
+		@content;
+	}
+}
