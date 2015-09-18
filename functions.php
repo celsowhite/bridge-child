@@ -13,7 +13,6 @@ function wp_load_files() {
 }
 
 add_action('wp_enqueue_scripts', 'wp_load_files', 11);
-<<<<<<< HEAD
 
 /*=============================================
 CUSTOM LOGIN SCREEN
@@ -32,5 +31,4 @@ function my_logincustomCSSfile() {
     wp_enqueue_style('login-styles', get_stylesheet_directory_uri() . '/css/login.css');
 }
 add_action('login_enqueue_scripts', 'my_logincustomCSSfile');
-=======
->>>>>>> 69bdcb8c16daeb27e4d1d0d8f11e8bc681021f04
+
