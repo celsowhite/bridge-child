@@ -4,7 +4,7 @@ This is a starter package for those interested in building a child theme on Brid
 
 ### Instructions ###
 
-* Purchase and download Bridge (http://themeforest.net/item/bridge-creative-multipurpose-wordpress-theme/7315054.)
+* Purchase and download Bridge (http://themeforest.net/item/bridge-creative-multipurpose-wordpress-theme/7315054)
 * Add the core 'Bridge' theme to wp-content/themes
 * Clone or download this repository into wp-content/themes
 * (Optional) change the name of the folder or the 'Theme Name' in the root style.css file.
