@@ -10,6 +10,15 @@ function wp_load_files() {
 	
 	wp_register_style('custom_styles', get_stylesheet_directory_uri() . '/css/style.css');
 	wp_enqueue_style('custom_styles');
+
+	/*=== Custom Scripts ===*/
+
+	wp_enqueue_script('_s-scripts', get_stylesheet_directory_uri() . '/js/scripts.js', '', '', true);
+
+	/*=== FitVids ===*/
+
+	wp_enqueue_script('_s-fitvids', get_stylesheet_directory_uri() . '/js/fitvids/fitvids.min.js', '', '', true);
+	
 }
 
 add_action('wp_enqueue_scripts', 'wp_load_files', 11);
