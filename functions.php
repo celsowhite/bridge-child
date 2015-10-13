@@ -23,6 +23,14 @@ function wp_load_files() {
 
 add_action('wp_enqueue_scripts', 'wp_load_files', 11);
 
+/*===================================
+Overwrite Bridge Includes
+===================================*/
+
+// Overwrite custom post types created by Bridge theme
+
+// require_once( get_stylesheet_directory() . '/includes/qode-custom-post-types.php' );
+
 /*=============================================
 CUSTOM LOGIN SCREEN
 =============================================*/
