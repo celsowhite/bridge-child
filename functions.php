@@ -4,16 +4,22 @@
 Enqueue Styles & Scripts
 ===================================*/
 
+function wp_load_main_script() {
+
+	/*=== Load Custom Scripts First so they initialize first over other scripts ===*/
+
+	wp_enqueue_script('_s-scripts', get_stylesheet_directory_uri() . '/js/scripts.js', '', '', true);
+
+}
+
+add_action('wp_enqueue_scripts','wp_load_main_script',1);
+
 function wp_load_files() {
 
 	/*=== Compass Compiled Stylesheet ===*/
 	
 	wp_register_style('custom_styles', get_stylesheet_directory_uri() . '/css/style.css');
 	wp_enqueue_style('custom_styles');
-
-	/*=== Custom Scripts ===*/
-
-	wp_enqueue_script('_s-scripts', get_stylesheet_directory_uri() . '/js/scripts.js', '', '', true);
 
 	/*=== FitVids ===*/
 
