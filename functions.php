@@ -18,7 +18,7 @@ function wp_load_files() {
 
 	/*=== Compass Compiled Stylesheet ===*/
 	
-	wp_register_style('custom_styles', get_stylesheet_directory_uri() . '/css/style.css');
+	wp_register_style('custom_styles', get_stylesheet_directory_uri() . '/css/style.min.css');
 	wp_enqueue_style('custom_styles');
 
 	/*=== FitVids ===*/
