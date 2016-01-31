@@ -38,6 +38,16 @@ Overwrite Bridge Includes
 // require_once( get_stylesheet_directory() . '/includes/qode-custom-post-types.php' );
 
 /*=============================================
+YOAST
+=============================================*/
+
+/*=== Adjust Metabox Priority
+
+add_filter( 'wpseo_metabox_prio', function() { return 'low';});
+
+===*/
+
+/*=============================================
 CUSTOM LOGIN SCREEN
 =============================================*/
 
@@ -51,7 +61,7 @@ add_filter('login_headerurl', 'my_loginURL');
 // Enque the login specific stylesheet for design customizations. CSS file is compiled through compass.
 
 function my_logincustomCSSfile() {
-    wp_enqueue_style('login-styles', get_stylesheet_directory_uri() . '/css/login.css');
+    wp_enqueue_style('login-styles', get_stylesheet_directory_uri() . '/css/login.min.css');
 }
 add_action('login_enqueue_scripts', 'my_logincustomCSSfile');
 
